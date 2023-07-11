@@ -1,0 +1,42 @@
+[
+    {
+        "invitationStatus": "Yes",
+        "invitationDate": "7/6/2023"
+    },
+    {
+        "invitationStatus": "Yes",
+        "invitationDate": "7/6/2023"
+    },
+    {
+        "invitationStatus": "No",
+        "invitationDate": "7/6/2023"
+    },
+    {
+        "invitationStatus": "Maybe",
+        "invitationDate": "5/25/2023"
+    },
+    {
+        "invitationStatus": "Maybe",
+        "invitationDate": "5/25/2023"
+    },
+    {
+        "invitationStatus": "Yes",
+        "invitationDate": "5/25/2023"
+    },
+    {
+        "invitationStatus": "No",
+        "invitationDate": "5/25/2023"
+    },
+    {
+        "invitationStatus": "No",
+        "invitationDate": "1/2/2023"
+    },
+    {
+        "invitationStatus": "Maybe",
+        "invitationDate": "1/2/2023"
+    },
+    {
+        "invitationStatus": "Yes",
+        "invitationDate": "1/2/2023"
+    }
+]
