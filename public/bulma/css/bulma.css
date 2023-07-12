@@ -5407,7 +5407,7 @@ button.dropdown-item.is-active {
 
 .navbar {
   background-color: white;
-  min-height: 3.25rem;
+  min-height: 5rem;
   position: relative;
   z-index: 30;
 }
@@ -6035,7 +6035,7 @@ button.dropdown-item.is-active {
 .navbar > .container {
   align-items: stretch;
   display: flex;
-  min-height: 3.25rem;
+  min-height: 5rem;
   width: 100%;
 }
 
@@ -6186,7 +6186,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
 }
 
 .navbar-item img {
-  max-height: 1.75rem;
+  max-height: 5rem;
 }
 
 .navbar-item.has-dropdown {
@@ -6311,7 +6311,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     display: flex;
   }
   .navbar {
-    min-height: 3.25rem;
+    min-height: 5rem;
   }
   .navbar.is-spaced {
     padding: 1rem 2rem;
