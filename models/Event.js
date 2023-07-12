@@ -9,7 +9,7 @@ Event.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     eventName: {
       type: DataTypes.STRING,
@@ -31,21 +31,14 @@ Event.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    attendees: {
-      type: DataTypes.ARRAY(DataTypes.INTEGER),
-      references: {
-        model: "invitation",
-        key: "invitee_id"
-      }
-    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'event'
+    modelName: "event",
   }
-)
+);
 
 module.exports = Event;
