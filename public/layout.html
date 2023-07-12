@@ -5,7 +5,9 @@
     <title>Hello Bulma!</title>
     <link rel="stylesheet" href="./bulma/css/bulma.css" />
     <link rel="stylesheet" href="style.css">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Fredericka+the+Great&family=Limelight&display=swap" rel="stylesheet">
   </head>
   <body>
     <nav
@@ -16,7 +18,7 @@
     >
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
-          <img src="./images//corkboard_logo.png" width="120" height="50" />
+          <img id="background" src="./images//corkboard_logo.png" width="120" height="400" />
         </a>
 
         <a
@@ -32,21 +34,22 @@
         </a>
       </div>
 
-      <div class="navbar-menu">
+      <div class="navbar-menu" id="menu">
         <div class="navbar-start">
           <a class="navbar-item"> Home </a>
-
           <a class="navbar-item"> Events </a>
         </div>
 
-        <div class="navbar-item"> 
-            <input id="search-bar" class="input is-small is rounded" type="text" placeholder="Search for events or users...">
-        </div>
+        <form class="navbar-item" id="navbarItem"> 
+          <button id="search" type="submit"></button>
+            <input id="search-bar" class="input is-small" 
+            type="search" placeholder="Search for events or users...">
+        </form>
 
         <div class="navbar-end">
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link"> More </a>
-            <div class="navbar-dropdown">
+            <div class="navbar-dropdown" id="drpdown">
               <a class="navbar-item"> Profile </a>
               <a class="navbar-item"> My Events </a>
               <a class="navbar-item"> My Invitations </a>
@@ -56,11 +59,10 @@
             </div>
           </div>
           <div class="navbar-item">
-            <div class="buttons">
-              <a class="button is-primary">
-                <strong>Sign up</strong>
+            <div class="buttons" >
+              <a class="button" id="btns">
+                <strong>Sign up</strong>/Log in
               </a>
-              <a class="button is-light"> Log in </a>
             </div>
           </div>
         </div>
