@@ -1,21 +1,52 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
-const User = require("../models/User");
-const Event = require("../models/Event");
+// const User = require("./User");
+// const Event = require("./Event");
 
-const Invitation = sequelize.define("Invitation", {
-  invitationStatus: {
-    type: DataTypes.String,
-    allowNull: false,
-    // boolean?
-  },
-  invitationDate: {
-    type: DataTypes.DATE,
-    allowNull: false,
-  },
-});
+class Invitation extends Model {}
 
-Invitation.belongsTo(User, { foreignKey: "userID" });
-Invitation.belongsTo(Event, { foreignKey: "eventID" });
+Invitation.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true
+    },
+    invitationStatus: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    invitationDate: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    event_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "event",
+        key: "id"
+      }
+    },
+    invitee_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id"
+      }
+    }
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'invitation'
+  }
+)
+
+
+// Invitation.belongsTo(User, { foreignKey: "userID" });
+// Invitation.belongsTo(Event, { foreignKey: "eventID" });
 
 module.exports = Invitation;
