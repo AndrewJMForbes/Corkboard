@@ -4,8 +4,8 @@ body{
     background-image: url(/public/images/Cork\ 4.avif);
     background-size: contain;
     background-position: center;
-    
 }
+
 .nav-start a {
     margin-left: 80px;
 }
@@ -74,7 +74,7 @@ body{
     #search-bar {
         margin-top: 20px;
         width: 35vw;
-        background-color: #E8D3B5;
+        background-color: black;
         box-shadow: 5px 5px 5px;
       }
 }
