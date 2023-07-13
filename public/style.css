@@ -1,5 +1,10 @@
+@font-face {
+    font-family: comingSoon;
+    src: url(./coming-soon/ComingSoon.ttf);
+}
+
 body{
-    font-family: 'Coming Soon', cursive;
+    font-family: comingSoon, sans-serif;
     color: #49403F;
     background-image: url(/public/images/Cork\ 4.avif);
     background-size: contain;
@@ -29,7 +34,7 @@ body{
     font-size: 25px;
 }
 #btns {
-    font-family: 'Coming Soon', cursive;
+    font-family: comingSoon, sans-serif;
     color: #49403F;
     margin-right: 30px;
     width: 200px;
