@@ -1,16 +1,18 @@
 body{
     font-family: 'Coming Soon', cursive;
     color: #49403F;
-    background-image: url(/public/images/corkk.jpg);
+    background-image: url(/public/images/Cork\ 4.avif);
     background-size: contain;
     background-position: center;
+    
 }
 .nav-start a {
     margin-left: 80px;
 }
 #navbar {
     background-color: #FFF6EA;
-    height: 10vh;
+    width: 100vw;
+    height: 65px;
 }
 #drpdown {
     background-color: #E8D3B5;
@@ -67,4 +69,12 @@ body{
     font-weight: 300;
     text-align: center;
     color: black;
+}
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    #search-bar {
+        margin-top: 20px;
+        width: 35vw;
+        background-color: #E8D3B5;
+        box-shadow: 5px 5px 5px;
+      }
 }

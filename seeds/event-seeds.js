@@ -1,4 +1,6 @@
-[
+const { Event } = require('../models');
+
+const eventData = [
     {
         "eventName": "Rich's Birthday Party",
         "eventDescription": "Come celebrate Rich's birthday! There will be a bouncy house and clowns.",
@@ -34,4 +36,8 @@
         "eventTime": "10:00AM - 4:00PM CST",
         "eventLocation": "The exact center of Lake Michigan (transport out won't be provided)"
     }
-]
+];
+
+const seedEvents = () => Event.bulkCreate(eventData);
+
+module.exports = seedEvents;
