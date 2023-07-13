@@ -44,6 +44,10 @@ body{
     font-size: 25px;
     box-shadow: 5px 5px 5px;
 }
+#signUp {
+    width: 50vw;
+    height: 
+}
 #search {
     background-image: url(/public/images/magnifying\ glass\ white.png);
     background-color: black;
