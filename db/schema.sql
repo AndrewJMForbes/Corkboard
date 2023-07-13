@@ -1,3 +1,4 @@
 -- SQLBook: Code
-DROP DATABASE IF EXISTS user_db;
-CREATE DATABASE user_db;
+DROP DATABASE IF EXISTS corkboard_db;
+CREATE DATABASE corkboard_db;
+USE corkboard_db;

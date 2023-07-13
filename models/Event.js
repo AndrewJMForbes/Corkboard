@@ -20,24 +20,17 @@ Event.init(
       allowNull: false,
     },
     eventDate: {
-      type: DataTypes.DATE,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     eventTime: {
-      type: DataTypes.TIME,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     eventLocation: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    attendees: {
-      type: DataTypes.ARRAY(DataTypes.INTEGER),
-      references: {
-        model: "invitation",
-        key: "invitee_id"
-      }
-    }
   },
   {
     sequelize,

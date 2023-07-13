@@ -1,3 +1,6 @@
+const { Invitation } = require('../models');
+
+const invitationData = 
 [
     {
         "invitationStatus": "Yes",
@@ -39,4 +42,8 @@
         "invitationStatus": "Yes",
         "invitationDate": "1/2/2023"
     }
-]
+];
+
+const seedInvitations = () => Invitation.bulkCreate(invitationData);
+
+module.exports = seedInvitations;
