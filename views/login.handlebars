@@ -1,11 +1,58 @@
-<div id="login-box">
-    <div class="field">
-      <label class="label">Email</label>
-      
-    </div>
-</div>
-<div id="signup-box">
+<div id="login-signUp" class="columns is half">
 
+  <form id="login" class="form login-form">
+    <h1 id="log">Login</h1>
+    <div class="form-group">
+      <label for="email-login">email:</label>
+      <input class="form-input" type="text" id="email-login" />
+    </div>
+    <div id="password-login" class="form-group">
+      <label for="password-login">password:</label>
+      <input class="form-input" type="password" id="password-login" />
+    </div>
+    <div class="form-group">
+      <button
+        id="login-btn"
+        class="btn btn-primary"
+        type="submit"
+      >login</button>
+    </div>
+  </form>
+  
+  <div id="signUp-box">
+    <form id="signUp" class="form login-form">
+      <h1 id="sign">Sign Up</h1>
+      <div class="form-group">
+        <label for="email-login">Name</label>
+        <input class="form-input" type="text" id="user-name" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">Email</label>
+        <input class="form-input" type="text" id="user-email" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">Password</label>
+        <input class="form-input" type="password" id="user-password" />
+      </div>
+      <div class="bday-locale columns is half">
+      <div class="form-group">
+        <label for="password-login">Birthday</label>
+        <input class="form-input" type="password" id="user-birthday" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">Location</label>
+        <input class="form-input" type="password" id="user-location" />
+      </div>
+      </div>
+      <div class="form-group">
+        <button
+          id="submit-btn"
+          class="btn btn-primary"
+          type="submit"
+        >Submit</button>
+      </div>
+    </form>
+  </div>
 </div>
 
 <script src="/js/login.js"></script>

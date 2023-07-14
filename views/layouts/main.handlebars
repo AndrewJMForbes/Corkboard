@@ -1,13 +1,14 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Cork Board</title>
     <link rel="stylesheet" href="./bulma/css/bulma.css" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Crafty+Girls&family=Fredericka+the+Great&family=Limelight&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+
+    <link rel="" href="https://fonts.googleapis.com">
+
   </head>
   <body>
     {{!-- NAVBAR CODE --}}
@@ -19,50 +20,40 @@
     >
       <div class="navbar-brand">
         <a class="navbar-item" href="#">
-          <img id="background" src="./images/corkboard_logo_small_360.png" width="60" height="400" />
+          <img id="background" src="./images/corkboard_logo_small_360.png" width="55" />
         </a>
 
+        <form> 
+          <button id="search" type="submit"></button>
+            <input id="search-bar" class="input is-small mx-4" 
+            type="search" placeholder="Search for events or users...">
+        </form>
+
         <a
+          id="burger"
           role="button"
           class="navbar-burger"
           aria-label="menu"
           aria-expanded="false"
-          data-target="navbarBasicExample"
+          data-target="navMenu"
         >
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
-
-      <div class="navbar-menu " id="menu">
+      
+      <div class="navbar-menu is-size-5" id="navMenu">
         <div class="navbar-start">
-          <a class="navbar-item"> Home </a>
-          <a class="navbar-item"> About </a>
+          <a id="home-btn" class="navbar-item is-size-6-mobile"> Home </a>
+          <a id="browse-btn" class="navbar-item is-size-6-mobile"> Browse Events </a>
         </div>
 
-        <form class="navbar-item" id="navbarItem"> 
-          <button id="search" type="submit"></button>
-            <input id="search-bar" class="input is-small" 
-            type="search" placeholder="Search for events or users...">
-        </form>
-
         <div class="navbar-end">
-          <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link"> More </a>
-            <div class="navbar-dropdown" id="drpdown">
-              <a class="navbar-item"> Profile </a>
-              <a class="navbar-item"> My Events </a>
-              <a class="navbar-item"> My Invitations </a>
-              <a class="navbar-item"> Settings </a>
-              <hr class="navbar-divider" />
-              <a class="navbar-item"> Log Out </a>
-            </div>
-          </div>
           <div class="navbar-item">
             <div class="buttons" >
-              <a class="button" id="btns">
-                <strong>Sign up/Log in</strong>
+              <a class="button is-size-5 is-size-6-mobile" id="btns">
+                Sign up/Log in
               </a>
             </div>
           </div>
@@ -71,5 +62,7 @@
     </nav>
     {{!-- END NAVBAR CODE --}}
     {{{body}}}
+  <footer></footer>
+    <script src="/js/nav.js"></script>
   </body>
 </html>
