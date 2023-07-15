@@ -25,15 +25,22 @@ Invitation.init(
       type: DataTypes.INTEGER,
       references: {
         model: "event",
-        key: "id"
+        key: "id",
+        unique: false
       }
     },
     invitee_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "user",
-        key: "id"
+        key: "id",
+        unique: false
       }
+    },
+    isHost: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
     }
   },
   {

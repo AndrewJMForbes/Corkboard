@@ -230,7 +230,11 @@ fieldset[disabled] .pagination-ellipsis {
   margin: 0;
   padding: 0;
 }
-
+#search-bar {
+  margin-top: 20px;
+  width: 35vw;
+  background-color: white;
+}
 /* Bulma Base */
 /*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 html,
@@ -1947,6 +1951,7 @@ fieldset[disabled] .button {
   .container.is-widescreen:not(.is-max-desktop) {
     max-width: 1152px;
   }
+  
 }
 
 @media screen and (max-width: 1407px) {
@@ -6185,9 +6190,9 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
   flex-shrink: 0;
 }
 
-.navbar-item img {
-  max-height: 5rem;
-}
+/* .navbar-item img {
+  max-height: ;
+} */
 
 .navbar-item.has-dropdown {
   padding: 0;
@@ -6311,7 +6316,7 @@ a.navbar-item:focus, a.navbar-item:focus-within, a.navbar-item:hover, a.navbar-i
     display: flex;
   }
   .navbar {
-    min-height: 5rem;
+    min-height: 3rem;
   }
   .navbar.is-spaced {
     padding: 1rem 2rem;

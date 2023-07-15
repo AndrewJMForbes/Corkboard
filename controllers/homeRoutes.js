@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { User } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
     res.render('homepage');
 
@@ -19,5 +19,42 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+router.get('/new-event', async (req, res) => {
+  try {
+    res.render('event-form');
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/event', async (req, res) => {
+  try {
+    res.render('event');
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/browse-events', async (req, res) => {
+  try {
+    res.render('browse-events');
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/profile', async (req, res) => {
+  try {
+    res.render('profile');
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 module.exports = router;

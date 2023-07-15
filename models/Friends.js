@@ -14,8 +14,18 @@ Friends.init(
         friends_list: {
             type: DataTypes.ARRAY(DataTypes.INTEGER),
             references: {
-                model: "user"
+                model: "user",
+                key: "id"
             }
         }
-    }
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: "friends",
+      }
 )
+
+module.exports = Friends;
