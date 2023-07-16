@@ -85,7 +85,7 @@ label {
 #menu {
     font-size: 25px;
 }
-#btns {
+.button {
     font-family: comingSoon, sans-serif;
     color: #49403F;
     margin-right: 30px;
