@@ -4,7 +4,9 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    res.render('homepage');
+    res.render('homepage', {
+      loggedIn: req.session.logged_in,
+    });
 
   } catch (err) {
     res.status(500).json(err);
@@ -16,13 +18,14 @@ router.get('/login', (req, res) => {
     res.redirect('/');
     return;
   }
-
   res.render('login');
 });
 
 router.get('/new-event', async (req, res) => {
   try {
-    res.render('event-form');
+    res.render('event-form', {
+      loggedIn: req.session.logged_in,
+    });
 
   } catch (err) {
     res.status(500).json(err);
@@ -31,7 +34,9 @@ router.get('/new-event', async (req, res) => {
 
 router.get('/event', async (req, res) => {
   try {
-    res.render('event');
+    res.render('event', {
+      loggedIn: req.session.logged_in,
+    });
 
   } catch (err) {
     res.status(500).json(err);
@@ -40,7 +45,9 @@ router.get('/event', async (req, res) => {
 
 router.get('/browse-events', async (req, res) => {
   try {
-    res.render('browse-events');
+    res.render('browse-events', {
+      loggedIn: req.session.logged_in,
+    });
 
   } catch (err) {
     res.status(500).json(err);
@@ -49,7 +56,9 @@ router.get('/browse-events', async (req, res) => {
 
 router.get('/profile', async (req, res) => {
   try {
-    res.render('profile');
+    res.render('profile', {
+      loggedIn: req.session.logged_in,
+    });
 
   } catch (err) {
     res.status(500).json(err);

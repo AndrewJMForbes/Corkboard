@@ -9,6 +9,10 @@
     --dark: #49403F
 }
 
+* {
+    font-family: comingSoon, sans-serif;
+}
+
 body{
     font-family: comingSoon, sans-serif;
     color: #49403F;
@@ -18,31 +22,38 @@ body{
     overflow: scroll;
     background-position: center;
 }
+
 label {
     display: block;
-    font-size: 25px;
-    font-weight: 700;
+    font-size: 20px;
+    /* font-weight: 700; */
 }
-input {
-    background-color: FFF;
-}
+
 /* Nav Bar Styling */
 .nav-start a {
     margin-left: 80px;
 }
+
 #navbar {
     background-color: var(--light);
     width: 100vw;
     height: 65px;
 }
+
 #drpdown {
     background-color: #E8D3B5;
     font-size: 20px;
     opacity: .8;
 }
 
+#search-bar {
+    margin-top: 20px;
+    width: 30vw;
+    background-color: var(--mid);
+    border-radius: 0px 5px 5px 0px
+  }
+
 #search {
-    background-image: url(/public/images/magnifying\ glass\ white.png);
     background-color: black;
     background-size: cover;
     background-position: center;
@@ -51,106 +62,99 @@ input {
     padding: 5px;
     margin-top: 20px;
     margin-right: -30px;
-    /* z-index: 10;  */
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px 0px 0px 5px;
 }
 
 #search:hover {
-    background-image: url(/public/images/magnifying\ glass.png);
     background-color: white;
-    background-size: cover;
-    background-position: center;
-    width: 30px;
-    height: 30px;
-    margin-right: -30px;
-    z-index: 5; 
-    border-radius: 5px 0 0 5px;
     cursor: pointer;
 }
 
 #menu {
     font-size: 25px;
 }
-#btns {
+.button {
     font-family: comingSoon, sans-serif;
     color: #49403F;
-    margin-right: 30px;
-    width: 200px;
+    margin-right: 10px;
+    width: 11vw;
     height: 40px;
     background-color: #E8D3B5;
     border-radius: 25px;
-    font-size: 25px;
 }
 
 /* Login Page Styling */
 #login-signUp {
+    display: flex;
+    flex-wrap:nowrap;
     width: 100%;
+    height: 90%;
     margin-left: auto;
     margin-right: auto;
 }
-/* #login {
-    align-items: center;
-    background-color: var(--light);
-    box-shadow: 5px 5px 5px;
-    text-align: center;
-    border-radius: 5px;
-    padding-bottom: 25px;
-    margin-top: 40px;
-    margin-bottom: 10px;
-    margin-left: 20%;
-    width: 600px;
-    height: 600px; 
-} */
 #login-btn,
-#submit-btn {
+#signUp-btn {
     background-color: var(--mid);
+    font-family: comingSoon, sans-serif;
     margin-top: 10px;
-    width: 50%;
-    font-size: 40px;
-    height: 60px;
+    width: 30%;
+    font-size: 30px;
     border-radius: 25px;
-    box-shadow: 5px 5px 5px;
 }
 #login-btn:hover,
-#submit-btn:hover {
+#signUp-btn:hover {
     background-color: var(--dark);
     color: var(--light);
     cursor: pointer;
-    box-shadow: 5px 5px 5px var(--mid);
 }
-#login,
-#signUp {
-    align-items: center;
+#signUp-box {
+    display: inline-block;
     background-color: var(--light);
-    box-shadow: 5px 5px 5px;
     text-align: center;
     border-radius: 5px;
-    padding-bottom: 25px;
+    margin-top: 40px;
+    margin-left:auto;
+    margin-right: auto;
+    width: 40%;
+    height: 90vh;  
+}
+#login-box {
+    display: inline-block;
+    background-color: var(--light);
+    text-align: center;
+    border-radius: 5px;
     margin-top: 40px;
     margin-bottom: 10px;
-    margin-left: 20%;
+    margin-left:auto;
+    margin-right: 40px;
     width: 600px;
-    height: 700px;  
+    height: 450px;  
+}
+#signUp-box input,
+#login-box input,
+#birthday input  {
+    width: 60%;
+    background-color: var(--light);
+
 }
 .form h1 {
     text-align: center;
-    border: 3px solid var(--dark);
+    border-bottom: 3px solid var(--dark);
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     border-radius: 5px 5px 0 0;
     width: 100%;
     background-color: var(--light);
     font-size: 40px;
     font-weight: 700;
-    text-decoration: underline;
 }
 .bday-locale {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    margin-left: 16%;
 }
-.bday-locale input {
-    width: 200px;
-    margin-right: 20px;
-    margin-left: auto;
-}
+
+
 .bday-locale label {
     text-align: center;
     margin-top: 20px;
@@ -158,15 +162,19 @@ input {
 
 .form-group {
    margin-top: 25px;
+   width: 100%;
 }
 .form-input {
+    text-align: center;
+    font-family: comingSoon;
    margin-top: 15px;
-   width: 60%;
+   width: 100%;
    height: 40px;
+   font-size: 1em;
+   font-weight: 700;
    margin-left: auto;
    margin-right: auto;
     border-radius: 5px;
-    background-color: FFF;
 }
 ::placeholder {
     font-size: 15px;
@@ -178,29 +186,56 @@ input {
 
 .event-box {
     background-color: var(--light);
-    width: 95vw;
+    width: 85vw;
     margin-top: 3rem;
     margin-left: auto;
     margin-right: auto;
-    padding: 2rem;
+    padding-top: 2rem;
+    padding-left: 10%;
+    padding-right: 10%;
     border-radius: 10px;
-
     height: 85vh;
     overflow-y: scroll;
 }
 
-#event-form, #event-page {
+#event-form {
+    margin-bottom: 10px;
+}
+
+#event-form {
+    width: 75vw;
+}
+
+#event-page {
     width: 80vw;
+}
+
+#event-form button {
+    background-color: var(--mid);
+    color: var(--dark);
+
+}
+
+#event-form button:hover {
+    background-color: var(--dark);
+    color: var(--light);
 }
 
 .section-header {
     text-align: center;
     font-size: 2rem;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--dark);
 }
 
 #event-page h2{
     font-size: 20px;
+}
+
+#event-info {
+    margin: 1em;
+    background-color: white;
 }
 
 
@@ -230,44 +265,191 @@ input {
 footer {
     position: relative;
 }
-@media screen and (min-width: 768px){
-    #login {
-        background-color: var(--mid);
+@media screen and (max-width: 396px) {
+    #login-signUp {
+        display: block;
+        width: 80%;
+    }
+    #navbar {
+        background-color: var(--light);
+        width: 100%;
+        height: 80px;
+    }
+    #searchBox {
+        display: flex;
+        width: 100%;
+        margin-left: 25px;
+    }
+    #search-bar {
+        margin-top: 20px;
+        height: 30px;
+        background-color:var(--mid);
+        border-radius: 0px 5px 5px 0px;
+      }
+      #search {
+        font-family: comingSoon;
+        font-size: small;
+        padding: 3px;
+        background-color: var(--dark);
         text-align: center;
-        border: 3px solid var(--dark);
+        color: var(--light);
+        width: 65px;
+        height: 30px;
+        margin-right: -23px;
+        border-radius: 5px 0px 0px 5px;
+    }
+    #search-bar input {
+        margin-left: 0px;
+    }
+    
+    #search:hover {
+        background-color: white;
+        background-size: cover;
+        background-position: center;
+        width: 50px;
+        height: 30px;
+        margin-right: -30px;
+        z-index: 10; 
+        border-radius: 5px 0 0 5px;
+        cursor: pointer;
+    }
+    #login-box {
+        background-color: var(--light);
+        text-align: center;
         border-radius: 5px;
-        box-shadow: 5px 5px 5px;
         padding-bottom: 25px;
         margin-top: 40px;
         margin-bottom: 10px;
-        margin-left: auto;
+        margin-left:auto;
         margin-right: auto;
-        width: 50%;
-        height: 100%; 
+        width: 100%;
+        height: 70%;  
     }
 
     .form-input {
         margin-top: 15px;
-        width: 60%;
+        width: 200px;
         margin-left: auto;
         margin-right: auto;
          border-radius: 5px;
          background-color: var(--light);
-         overflow: auto;
      }
 
-     #signUp {
-        background-color: var(--mid);
+     #signUp-box {
+        background-color: var(--light);
         text-align: center;
         border-radius: 5px;
-        box-shadow: 5px 5px 5px;
         padding-bottom: 25px;
         margin-top: 40px;
         margin-bottom: 10px;
-        margin-left: 5px;
+        margin-left:auto;
         margin-right: auto;
         width: 100%;
-        height: 100%; 
+        height: 100vh;  
+    }
+
+    .bday-locale {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (max-width: 769px) and (min-width: 396px){
+    #login-signUp {
+        display: block;
+        width: 80%;
+    }
+    .navbar-burger {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background: none;
+        border: none;
+        color: currentColor;
+        font-family: inherit;
+        font-size: 1em;
+        margin-top: 10px;
+        margin-right: 10px;
+        padding: 0;
+      }
+    #navbar {
+        background-color: var(--light);
+        width: 100%;
+        height: 65px;
+    }
+    #searchBox {
+        display: flex;
+        width: 100%;
+        margin-left: 25px;
+
+    }
+    #search-bar {
+        margin-top: 20px;
+        width: 55vw;
+        text-align: center;
+        background-color: var(--mid);
+        border-radius: 0px 5px 5px 0px;
+
+      }
+      #search {
+        font-family: comingSoon;
+        font-size: small;
+        background-color: var(--dark);
+        text-align: center;
+        padding: 2px;
+        color: var(--light);
+        width: 65px;
+        height: 30px;
+        margin-top: 20px;
+        margin-right: -20px;
+        border-radius: 5px 0px 0px 5px;
+    }
+    
+    #search:hover {
+        background-color: white;
+        background-size: cover;
+        background-position: center;
+        width: 50px;
+        height: 30px;
+        margin-right: -30px;
+        z-index: 10; 
+        border-radius: 5px 0 0 5px;
+        cursor: pointer;
+    }
+    #login-box {
+        background-color: var(--light);
+        text-align: center;
+        border-radius: 5px;
+        padding-bottom: 25px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        margin-left:auto;
+        margin-right: auto;
+        width: 100%;
+        height: 70%;  
+    }
+
+    .form-input {
+        margin-top: 15px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+         border-radius: 5px;
+         background-color: var(--light);
+     }
+
+     #signUp-box {
+        background-color: var(--light);
+        box-shadow: 5px 5px 5px;
+        text-align: center;
+        border-radius: 5px;
+        padding-bottom: 25px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        margin-left:auto;
+        margin-right: auto;
+        width: 100%;
+        height: 100vh;  
     }
 
     .bday-locale {
@@ -277,19 +459,68 @@ footer {
     }
 }
 
-@media screen and (max-width: 768px) {
-    #login {
+@media screen and (max-width: 1244px) and (min-width: 770px) {
+    #login-signUp {
+        display: block;
+        width: 80%;
+    }
+    .navbar-burger {
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background: none;
+        border: none;
+        color: currentColor;
+        font-family: inherit;
+        font-size: 1em;
+        margin-top: 10px;
+        margin-right: 10px;
+        padding: 0;
+      }
+      #search-bar {
+        margin-top: 20px;
         background-color: var(--mid);
+        border-radius: 0px 5px 5px 0px;
+
+      }
+      #search {
+        font-family: comingSoon;
+        font-size: 1em;
+        background-color: var(--dark);
+        text-align: center;
+        padding: 2px;
+        color: var(--light);
+        width: 100px;
+        height: 30px;
+        margin-top: 20px;
+        margin-right: -30px;
+        z-index: 20; 
+        border-radius: 5px 0px 0px 5px;
+    }
+    
+    #search:hover {
+        background-color: white;
+        background-size: cover;
+        background-position: center;
+        width: 50px;
+        height: 30px;
+        margin-right: -30px;
+        z-index: 10; 
+        border-radius: 5px 0 0 5px;
+        cursor: pointer;
+    }
+    #login-box {
+        background-color: var(--light);
+        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
-        box-shadow: 5px 5px 5px;
         padding-bottom: 25px;
         margin-top: 40px;
         margin-bottom: 10px;
-        margin-left: auto;
+        margin-left:auto;
         margin-right: auto;
-        width: 80%;
-        height: 100%; 
+        width: 100%;
+        height: 60vh;  
     }
 
     .form-input {
@@ -299,21 +530,19 @@ footer {
         margin-right: auto;
          border-radius: 5px;
          background-color: var(--light);
-         overflow: auto;
      }
 
-     #signUp {
-        background-color: var(--mid);
+     #signUp-box {
+        background-color: var(--light);
         text-align: center;
         border-radius: 5px;
-        box-shadow: 5px 5px 5px;
         padding-bottom: 25px;
         margin-top: 40px;
         margin-bottom: 10px;
-        margin-left: auto;
+        margin-left:auto;
         margin-right: auto;
-        width: 80%;
-        height: 100%; 
+        width: 100%;
+        height: 100vh;  
     }
 
     .bday-locale {
@@ -322,3 +551,65 @@ footer {
         margin-right: auto;
     }
 }
+
+@media screen and (min-width: 1245px) {
+    #login-signUp {
+        display: flex;
+        width: 80%;
+    }
+    #search-bar {
+        margin-top: 20px;
+        background-color: var(--mid);
+        border-radius: 0px 5px 5px 0px;
+
+      }
+      #search {
+        font-family: comingSoon;
+        font-size: medium;
+        background-color: var(--dark);
+        text-align: center;
+        color: var(--light);
+        width: 100px;
+        height: 30px;
+        margin-top: 20px;
+        margin-right: -30px;
+        z-index: 20; 
+        border-radius: 5px 0px 0px 5px;
+    }
+    
+    #search:hover {
+        background-color: white;
+        background-size: cover;
+        background-position: center;
+        width: 50px;
+        height: 30px;
+        margin-right: -30px;
+        z-index: 10; 
+        border-radius: 5px 0 0 5px;
+        cursor: pointer;
+    }
+    #signUp-box {
+        background-color: var(--light);
+        text-align: center;
+        border-radius: 5px;
+        padding-bottom: 25px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        margin-left:auto;
+        margin-right: auto;
+        width: 600px;
+        height: 100%;  
+    }
+    #login-box {
+        background-color: var(--light);
+        text-align: center;
+        border-radius: 5px;
+        padding-bottom: 25px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        margin-left:auto;
+        margin-right: 40px;
+        width: 600px;
+        height: 450px;  
+    }
+    }
