@@ -1,6 +1,6 @@
-<div id="login-signUp" class="columns is half">
-
-  <form id="login" class="form login-form">
+<div id="login-signUp">
+<div id="login-box">
+  <form id="login-form" class="form login-form">
     <h1 id="log">Login</h1>
     <div class="form-group">
       <label for="email-login">email:</label>
@@ -18,9 +18,10 @@
       >login</button>
     </div>
   </form>
+  </div>
   
   <div id="signUp-box">
-    <form id="signUp" class="form login-form">
+    <form id="signUp-form" class="form signUp-form">
       <h1 id="sign">Sign Up</h1>
       <div class="form-group">
         <label for="email-login">Name</label>
@@ -34,19 +35,19 @@
         <label for="password-login">Password</label>
         <input class="form-input" type="password" id="user-password" />
       </div>
-      <div class="bday-locale columns is half">
+      <div class="bday-locale ">
       <div class="form-group">
         <label for="password-login">Birthday</label>
-        <input class="form-input" type="password" id="user-birthday" />
+        <input class="birthday form-input" type="text" id="user-birthday" />
       </div>
       <div class="form-group">
         <label for="password-login">Location</label>
-        <input class="form-input" type="password" id="user-location" />
+        <input class="location form-input" type="text" id="user-location" />
       </div>
       </div>
       <div class="form-group">
         <button
-          id="submit-btn"
+          id="signUp-btn"
           class="btn btn-primary"
           type="submit"
         >Submit</button>

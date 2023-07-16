@@ -18,7 +18,24 @@ const loginFormHandler = async (event) => {
     }
   }
 };
+const signUpFormHandler = async (event) => {
+  event.preventDefault();
+
+  const userName = document.querySelector('#user-name').value.trim();
+  const userEmail = document.querySelector('#user-email').value.trim();
+  const userPassword = document.querySelector('#user-password').value.trim();
+  const userBirthday = document.querySelector('#user-birthday').value.trim();
+  const userLocation = document.querySelector('#user-location').value.trim();
+  console.log('You\'re Signed Up!')
+  
+
+}
 
 document
   .querySelector('.login-form')
   .addEventListener('submit', loginFormHandler);
+
+document
+  .querySelector('.signUp-form')
+  .addEventListener('signUp-btn', signUpFormHandler);
+  
