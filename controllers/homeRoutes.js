@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     res.render('homepage', {
-      loggedIn: req.session.loggedIn,
+      loggedIn: req.session.logged_in,
     });
 
   } catch (err) {
@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/login', (req, res) => {
-  if (req.session.loggedIn) {
+  if (req.session.logged_in) {
     res.redirect('/');
     return;
   }
@@ -24,7 +24,7 @@ router.get('/login', (req, res) => {
 router.get('/new-event', async (req, res) => {
   try {
     res.render('event-form', {
-      loggedIn: req.session.loggedIn,
+      loggedIn: req.session.logged_in,
     });
 
   } catch (err) {
@@ -35,7 +35,7 @@ router.get('/new-event', async (req, res) => {
 router.get('/event', async (req, res) => {
   try {
     res.render('event', {
-      loggedIn: req.session.loggedIn,
+      loggedIn: req.session.logged_in,
     });
 
   } catch (err) {
@@ -46,7 +46,7 @@ router.get('/event', async (req, res) => {
 router.get('/browse-events', async (req, res) => {
   try {
     res.render('browse-events', {
-      loggedIn: req.session.loggedIn,
+      loggedIn: req.session.logged_in,
     });
 
   } catch (err) {
@@ -57,7 +57,7 @@ router.get('/browse-events', async (req, res) => {
 router.get('/profile', async (req, res) => {
   try {
     res.render('profile', {
-      loggedIn: req.session.loggedIn,
+      loggedIn: req.session.logged_in,
     });
 
   } catch (err) {

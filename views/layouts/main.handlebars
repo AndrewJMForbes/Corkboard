@@ -51,18 +51,25 @@
         </div>
 
         <div class="navbar-end">
-          {{#if logged_in}}
+          {{#if loggedIn}}
           <div class="navbar-item">
             <div class="buttons" >
-              <a class="button is-size-5 is-size-6-mobile" id="profile_btn">
+              <a class="button is-size-6 is-size-6-mobile" id="profile_btn">
                 My Profile
+              </a>
+            </div>
+          </div>
+          <div class="navbar-item">
+            <div class="buttons" >
+              <a class="button is-size-6 is-size-6-mobile" id="logout">
+                Log Out
               </a>
             </div>
           </div>
           {{else}}
           <div class="navbar-item">
             <div class="buttons" >
-              <a class="button is-size-5 is-size-6-mobile" id="btns">
+              <a class="button is-size-6 is-size-6-mobile" id="btns">
                 Sign up/Log in
               </a>
             </div>
@@ -74,6 +81,7 @@
     {{!-- END NAVBAR CODE --}}
     {{{body}}}
   <footer></footer>
+    <script src="/js/logout.js"></script>
     <script src="/js/nav.js"></script>
   </body>
 </html>
