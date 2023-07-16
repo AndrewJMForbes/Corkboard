@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Cork Board</title>
+    <title>Corkboard</title>
     <link rel="stylesheet" href="./bulma/css/bulma.css" />
     <link rel="stylesheet" href="/style.css">
 
@@ -51,19 +51,39 @@
         </div>
 
         <div class="navbar-end">
+          {{#if loggedIn}}
           <div class="navbar-item">
             <div id="signup-loginbutton"class="buttons" >
               <a class="button is-size-5 is-size-6-mobile" id="btns">
+            <div class="buttons" >
+              <a class="button is-size-6 is-size-6-mobile" id="profile_btn">
+                My Profile
+              </a>
+            </div>
+          </div>
+          <div class="navbar-item">
+            <div class="buttons" >
+              <a class="button is-size-6 is-size-6-mobile" id="logout">
+                Log Out
+              </a>
+            </div>
+          </div>
+          {{else}}
+          <div class="navbar-item">
+            <div class="buttons" >
+              <a class="button is-size-6 is-size-6-mobile" id="btns">
                 Sign up/Log in
               </a>
             </div>
           </div>
+          {{/if}}
         </div>
       </div>
     </nav>
     {{!-- END NAVBAR CODE --}}
     {{{body}}}
   <footer></footer>
+    <script src="/js/logout.js"></script>
     <script src="/js/nav.js"></script>
   </body>
 </html>
