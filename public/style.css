@@ -55,17 +55,16 @@ label {
     height: 20px;
     background-color: var(--light);
 }
-#home-btn:hover,
+/* #home-btn:hover,
 #browse-btn:hover{
 
     text-align: center;
     color: var(--light);
     height: 25px;
-    
+
     border-radius: 5px;
-    background-color: var(--dark);
     transform: scale(1.2);
-}
+} */
 #search-bar {
     margin-top: 20px;
     width: 55vw;
