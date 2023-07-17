@@ -80,7 +80,12 @@ router.get('/event/:id', async (req, res) => {
 
 router.get('/browse-events', async (req, res) => {
   try {
+    const publicEventData = await Event.findAll();
+
+    const publicEvents = publicEventData.map(data => data.get({plain: true}));
+
     res.render('browse-events', {
+      events: publicEvents,
       loggedIn: req.session.logged_in,
     });
 
