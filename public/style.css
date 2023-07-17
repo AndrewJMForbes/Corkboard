@@ -240,7 +240,12 @@ label {
     width: 80vw;
 }
 
+.p-event-info {
+    font-size: 16px;
+}
+
 .section-header {
+    border-bottom: 1px solid black;
     text-align: center;
     font-size: 2rem;
     margin-bottom: 10px;
