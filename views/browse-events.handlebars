@@ -1,125 +1,28 @@
 <div class="event-box">
     <h1 class="section-header is-size-1 pb-2 mb-6">Public Events</h1>
     <section id="public-events" class="columns is-multiline ">
-        <div class="column is-one-third">
-            <div class="card">
-                <div class="card-content">
-                    <p class="title"> 
-                        <span>Event 1 Name</span>
-                    </p>
-                    <p class="subtitle columns"> 
-                        <span class="column is-one-third">Host Name</span><br>
-                        <span class="column is-one-third">Location</span><br>
-                        <span class="column is-one-third">Date and Time</span>
-                    </p>
-                </div>
-                <footer class="card-footer">
-                    <p class="card-footer-item">
-                        <span> <a href="#">View Event</a> </span>
-                    </p>
-                </footer>
-            </div>
-        </div>
-        
-        <div class="column is-one-third">
-            <div class="card">
-                <div class="card-content">
-                    <p class="title"> 
-                        <span>Event 2 Name</span>
-                    </p>
-                    <p class="subtitle columns"> 
-                        <span class="column is-one-third">Host Name</span><br>
-                        <span class="column is-one-third">Location</span><br>
-                        <span class="column is-one-third">Date and Time</span>
-                    </p>
-                </div>
-                <footer class="card-footer">
-                    <p class="card-footer-item">
-                        <span> <a href="#">View Event</a> </span>
-                    </p>
-                </footer>
-            </div>
-        </div>
-        
-        <div class="column is-one-third">
-            <div class="card">
-                <div class="card-content">
-                    <p class="title"> 
-                        <span>Event 3 Name</span>
-                    </p>
-                    <p class="subtitle columns"> 
-                        <span class="column is-one-third">Host Name</span><br>
-                        <span class="column is-one-third">Location</span><br>
-                        <span class="column is-one-third">Date and Time</span>
-                    </p>
-                </div>
-                <footer class="card-footer">
-                    <p class="card-footer-item">
-                        <span> <a href="#">View Event</a> </span>
-                    </p>
-                </footer>
-            </div>
-        </div>
 
+        {{#each events as |event|}}
         <div class="column is-one-third">
             <div class="card">
                 <div class="card-content">
-                    <p class="title"> 
-                        <span>Event 4 Name</span>
+                    <p class="title is-size-4 is-size-3-desktop has-text-centered"> 
+                        <span>{{event.eventName}}</span>
                     </p>
-                    <p class="subtitle columns"> 
-                        <span class="column is-one-third">Host Name</span><br>
-                        <span class="column is-one-third">Location</span><br>
-                        <span class="column is-one-third">Date and Time</span>
+                    <p class="subtitle columns p-event-info"> 
+                        <span class="column is-one-half">{{event.eventLocation}}</span><br>
+                        <span class="column is-one-half">{{format_time event.eventDate}}</span>
                     </p>
                 </div>
                 <footer class="card-footer">
                     <p class="card-footer-item">
-                        <span> <a href="#">View Event</a> </span>
+                        <span> <a value="{{event.id}}" class="eventViewBtn" >View Event</a> </span>
                     </p>
                 </footer>
             </div>
         </div>
-
-        <div class="column is-one-third">
-            <div class="card">
-                <div class="card-content">
-                    <p class="title"> 
-                        <span>Event 5 Name</span>
-                    </p>
-                    <p class="subtitle columns"> 
-                        <span class="column is-one-third">Host Name</span><br>
-                        <span class="column is-one-third">Location</span><br>
-                        <span class="column is-one-third">Date and Time</span>
-                    </p>
-                </div>
-                <footer class="card-footer">
-                    <p class="card-footer-item">
-                        <span> <a href="#">View Event</a> </span>
-                    </p>
-                </footer>
-            </div>
-        </div>
-
-        <div class="column is-one-third">
-            <div class="card">
-                <div class="card-content">
-                    <p class="title"> 
-                        <span>Event 6 Name</span>
-                    </p>
-                    <p class="subtitle columns"> 
-                        <span class="column is-one-third">Host Name</span><br>
-                        <span class="column is-one-third">Location</span><br>
-                        <span class="column is-one-third">Date and Time</span>
-                    </p>
-                </div>
-                <footer class="card-footer">
-                    <p class="card-footer-item">
-                        <span> <a href="#">View Event</a> </span>
-                    </p>
-                </footer>
-            </div>
-        </div>
-        
+        {{/each}}
     </section>
 </div>
+
+<script src="/js/browseEvents.js"></script>
