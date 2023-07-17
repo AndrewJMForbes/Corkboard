@@ -8,10 +8,7 @@ User.belongsToMany(Event, {
 });
 
 Event.belongsToMany(User, {
-    through: {
-        model: Invitation,
-        unique: false
-        },
+    through: Invitation,
     as: 'invited_users'
 });
 
