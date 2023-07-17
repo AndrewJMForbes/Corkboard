@@ -29,7 +29,7 @@ Invitation.init(
         unique: false
       }
     },
-    invitee_id: {
+    attendee_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "user",

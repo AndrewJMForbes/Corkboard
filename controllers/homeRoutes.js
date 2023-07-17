@@ -1,10 +1,12 @@
 const router = require('express').Router();
-const { User } = require('../models');
+const { User, Event, Invitation } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    res.render('homepage');
+    res.render('homepage', {
+      loggedIn: req.session.logged_in,
+    });
 
   } catch (err) {
     res.status(500).json(err);
@@ -16,22 +18,60 @@ router.get('/login', (req, res) => {
     res.redirect('/');
     return;
   }
-
   res.render('login');
 });
 
 router.get('/new-event', async (req, res) => {
   try {
-    res.render('event-form');
+    res.render('event-form', {
+      loggedIn: req.session.logged_in,
+    });
 
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get('/event', async (req, res) => {
+router.get('/event/:id', async (req, res) => {
   try {
-    res.render('event');
+    const eventData = await Event.findByPk(req.params.id, {
+      include: [
+        {
+          all: true,
+          nested: true,
+        },
+        {
+          model: User,
+          through: Invitation,
+          as: "invited_users"
+        }
+      ]
+    });
+
+    console.log(eventData);
+
+    const hostData = await Invitation.findOne({
+      where: {
+        event_id: req.params.id,
+        isHost: true
+      }
+    });
+
+    const hostUser = await User.findOne({
+      where: {
+        id: hostData.attendee_id,
+      }
+    })
+    
+    const host = hostUser.get({plain: true});
+
+    const event = eventData.get({plain: true});
+
+    res.render('event', {
+      host,
+      event,
+      loggedIn: req.session.logged_in,
+    });
 
   } catch (err) {
     res.status(500).json(err);
@@ -40,7 +80,14 @@ router.get('/event', async (req, res) => {
 
 router.get('/browse-events', async (req, res) => {
   try {
-    res.render('browse-events');
+    const publicEventData = await Event.findAll();
+
+    const publicEvents = publicEventData.map(data => data.get({plain: true}));
+
+    res.render('browse-events', {
+      events: publicEvents,
+      loggedIn: req.session.logged_in,
+    });
 
   } catch (err) {
     res.status(500).json(err);
@@ -49,7 +96,9 @@ router.get('/browse-events', async (req, res) => {
 
 router.get('/profile', async (req, res) => {
   try {
-    res.render('profile');
+    res.render('profile', {
+      loggedIn: req.session.logged_in,
+    });
 
   } catch (err) {
     res.status(500).json(err);

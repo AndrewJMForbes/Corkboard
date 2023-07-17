@@ -1,63 +1,78 @@
 
 <div class="event-box" id="event-form">
-<h1 class="section-header">Create A New Event</h1>
-  <div class="field">
+  <h1 class="section-header form-group">Create A New Event</h1>
+
+  <div class="field form-group">
     <label class="label">Event Name</label>
     <div class="control">
-      <input class="input" type="text" placeholder="Text input" />
+      <input class="input" type="text" placeholder="Enter the name of your event..." id="new-event-name"/>
     </div>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <label class="label">Location</label>
     <div class="control has-icons-left has-icons-right">
       <input
         class="input"
         type="text"
-        placeholder="Text input"
-      />
-      <span class="icon is-small is-left">
-        <i class="fas fa-user"></i>
-      </span>
-      <span class="icon is-small is-right">
-        <i class="fas fa-check"></i>
-      </span>
-    </div>
-  </div>
-<div class="columns">
-  <div class="field column is-half">
-    <label class="label">Date</label>
-    <div class="control has-icons-left has-icons-right">
-      <input
-        class="input"
-        type="date"
-        placeholder=""
+        placeholder="Where is this happening??"
+        id="new-event-location"
       />
     </div>
   </div>
 
-  <div class="field column is-half">
-    <label class="label">Time</label>
-    <div class="control has-icons-left has-icons-right">
-      <input
-        class="input"
-        type="time"
-        placeholder=""
-      />
+  <div class="columns form-group">
+    <div class="field column is-half">
+      <label class="label">Date</label>
+      <div class="control has-icons-left has-icons-right">
+        <input
+          class="input"
+          type="date"
+          placeholder=""
+          id="new-event-date"
+        />
+      </div>
+    </div>
+
+    <div class="field column is-half">
+      <label class="label">Time</label>
+      <div class="control has-icons-left has-icons-right">
+        <input
+          class="input"
+          type="time"
+          placeholder=""
+          id="new-event-time"
+        />
+      </div>
     </div>
   </div>
-</div>
 
-  <div class="field">
+  <div id="event-type" class="control form-group">
+    <label class="label">What kind of event is this?</label><br>
+    <label class="radio">
+      <input type="radio" name="event-type" checked>
+      Public Event
+    </label>
+    <label class="radio">
+      <input type="radio" name="event-type">
+      Party
+    </label>
+    <label class="radio">
+      <input type="radio" name="event-type">
+      Hangout
+    </label>
+  </div>
+
+  <div class="field form-group">
     <label class="label">Description</label>
     <div class="control">
-      <textarea class="textarea" placeholder="Textarea"></textarea>
+      <textarea class="textarea" placeholder="Describe your new event!" id="new-event-description"></textarea>
     </div>
   </div>
 
-  <div class="field is-grouped">
+  <div class="field form-group is-grouped is-centered">
     <div class="control">
-      <button class="button is-link">Submit</button>
+      <button class="button is-link" id="new-event-submit">Submit</button>
     </div>
     <div class="control">
       <button class="button is-link is-light">Cancel</button>
@@ -65,3 +80,4 @@
   </div>
 
 </div>
+<script src="js/newEvent.js"></script>
