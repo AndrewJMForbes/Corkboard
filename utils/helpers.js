@@ -11,4 +11,8 @@ module.exports = {
 
     return `<span for="img" aria-label="book">${book}</span>`;
   },
+  // list_attendees: (users) => {
+
+  // }
 };
+

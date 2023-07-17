@@ -20,7 +20,7 @@ Event.init(
       allowNull: false,
     },
     eventDate: {
-      type: DataTypes.STRING,
+      type: DataTypes.DATE,
       allowNull: false,
     },
     eventTime: {

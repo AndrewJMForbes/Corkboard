@@ -31,6 +31,8 @@ browseBtn.addEventListener("click", function(){
     document.location.replace('/browse-events');
 });
 
-LoginForm.addEventListener("click", function(){
-    document.location.replace('/login');
-});
+if (LoginForm) {
+    LoginForm.addEventListener("click", function(){
+        document.location.replace('/login');
+    });    
+}
