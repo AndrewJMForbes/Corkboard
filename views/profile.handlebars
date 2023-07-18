@@ -2,15 +2,15 @@
 <div class="container">
   <div class="columns">
     <div class="column">
-      <figure class="image is-128x128">
-        <img src="../public/images/" alt="Profile Picture">
+      <figure id="profile-pic">
       </figure>
     </div>
     <div class="column">
       <div class="content">
-        <p><strong>Location:</strong> {{location}}</p>
-        <p><strong>Age:</strong> {{age}}</p>
-        <p><strong>Email:</strong> {{email}}</p>
+        <p class="is-size-2"><strong> {{user.username}} </strong></p>
+        <p class="is-size-4"><strong>Age:</strong></p>
+        <p class="is-size-4"><strong>Location:</strong> {{user.location}}</p>
+        <p class="is-size-4"><strong>Email:</strong> {{user.email}}</p>
       </div>
     </div>
   </div>
@@ -44,8 +44,22 @@
     <div class="column">
       <!-- Other Box -->
       <div class="box">
-        <h3 class="title is-4 has-text-centered">Calendar</h3>
-        <p>Calendar</p>
+        <div id='calendar'></div>
+<script>
+      var events = {{{events}}}
+
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth',
+          events: events
+        });
+        calendar.render();
+      });
+    
+
+
+    </script>
       </div>
     </div>
   </div>

@@ -3,12 +3,18 @@ const Event = require('./Event');
 const Invitation = require('./Invitation');
 
 User.belongsToMany(Event, {
-    through: Invitation,
+    through: {
+        model: Invitation,
+        unique: false
+    },
     as: 'user_events'
 });
 
 Event.belongsToMany(User, {
-    through: Invitation,
+    through: { 
+        model: Invitation,
+        unique: false
+    },
     as: 'invited_users'
 });
 

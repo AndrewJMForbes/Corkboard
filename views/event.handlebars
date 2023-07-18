@@ -7,7 +7,7 @@
                 <span> Location: {{event.eventLocation}}</span>
             </h2>
             <h2 class="column is-half is-size-4">
-                <span>Date: {{event.eventDate}} </span><br>
+                <span>Date: {{format_time event.eventDate}} </span><br>
                 <span> Time: {{event.eventTime}} </span>
             </h2>
         </div>
@@ -23,7 +23,9 @@
             </form><br>
             <h2>Attending: </h2>
             <ul>
-                <li> {{host.username}} (Host) </li>
+                {{#each event.invited_users as |attendee|}}
+                    <li><strong>{{attendee.username}}</strong> ({{attendee.email}}) </li>
+                {{/each}}
             </ul>
         </div>
     </div>

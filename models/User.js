@@ -37,7 +37,14 @@ User.init(
         len: [8],
       },
     },
-    // is host y/n
+    birthday: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
+    location: {
+      type: DataTypes.STRING,
+      allowNull: false
+    }
   },
   {
     hooks: {

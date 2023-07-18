@@ -18,6 +18,33 @@ body{
     overflow: scroll;
     background-position: center;
 }
+hr {
+    background-color: var(--dark);
+}
+#content {
+    background-color: var(--mid);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+#viewEventBtn {
+    color: var(--light)
+}
+.card-footer-item{
+    background-color:var(--dark);
+    border-radius: 0px 0px 5px 5px;
+    color: var(--light)
+}
+
+#info {
+    font-size: 20px;
+    font-weight: 700;
+}
+#event-info,
+#eventDate,
+#eventLocation {
+    font-weight: 700;
+    font-size: 1.5em;
+}
 #background:hover{
 animation-name: rotate;
 animation-duration: 5s;
@@ -37,6 +64,13 @@ label {
 .nav-start a {
     margin-left: 80px;
 }
+#profile-pic {
+    background-image: url(./images/Portrait_Placeholder.png);
+    background-size: contain;
+    border: 5px inset var(--dark);
+    width: 200px;
+    height: 200px;
+}
 #navbar {
     background-color: var(--light);
     width: 100vw;
@@ -48,7 +82,8 @@ label {
     opacity: .8;
 }
 #home-btn,
-#browse-btn{
+#browse-btn,
+#newEvent-btn{
     text-align: center;
     margin-top: 25px;
     margin-left: 10px;
@@ -177,13 +212,12 @@ label {
 }
 .form h1 {
     text-align: center;
-    border: 3px solid var(--dark);
+    border-bottom: 3px solid var(--dark);
     border-radius: 5px 5px 0 0;
     width: 100%;
     background-color: var(--light);
     font-size: 40px;
     font-weight: 700;
-    text-decoration: underline;
 }
 .bday-locale {
     display: flex;
@@ -208,7 +242,7 @@ label {
    margin-top: 15px;
    width: 100%;
    height: 40px;
-   font-size: 25px;
+   font-size: 18px;
    font-weight: 700;
    margin-left: auto;
    margin-right: auto;
@@ -256,9 +290,28 @@ label {
 
 
 /* Home Page Styling */
-#homepage-body {
+#homepage-body, #about-us {
     background-color: var(--light);
-    /* margin: 40px; */
+}
+
+#about-us {
+    margin-top: 20px;
+}
+
+#event-sample {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+#sample-event {
+    background-color: var(--mid);
+}
+
+.team-column {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
 }
 
 .profile-box {
@@ -324,6 +377,16 @@ footer {
         border-radius: 5px;
         margin-left: auto;
         margin-right: auto;
+    }
+    #newEvent-btn {
+        height: 40px;
+        width: 50%;
+        font-size: medium;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
     }
     #btns {
         margin-left: auto;
@@ -446,6 +509,16 @@ footer {
         border-radius: 5px;
         margin-left: auto;
         margin-right: auto;
+    }
+    #newEvent-btn {
+        height: 40px;
+        width: 50%;
+        font-size: medium;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
     }
     #btns {
         margin-top: 1px;
@@ -577,6 +650,16 @@ footer {
         margin-bottom: 20px;
         margin-top:20px;
      }
+     #newEvent-btn {
+        height: 40px;
+        width: 50%;
+        font-size: medium;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+    }
      #btns {
         margin-left: auto;
         margin-right: auto;
@@ -691,6 +774,11 @@ footer {
     }
      #browse-btn {
         margin-top: 25px;
+        font-size: medium;
+        font-weight: 700;
+     }
+     #newEvent-btn {
+        margin-top: 16px;
         font-size: medium;
         font-weight: 700;
      }
