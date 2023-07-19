@@ -91,12 +91,12 @@ label {
     background-color: var(--light);
 }
 /* #home-btn:hover,
-#browse-btn:hover{
+#browse-btn:hover,
+#newEvent-btn:hover{
 
     text-align: center;
-    color: var(--light);
+    color: var(--dark);
     height: 25px;
-
     border-radius: 5px;
     transform: scale(1.2);
 } */
@@ -140,17 +140,6 @@ label {
     background-color: #E8D3B5;
     border-radius: 25px;
 }
-/* #btns:hover {
-    font-family: comingSoon, sans-serif;
-    color: var(--light);
-    font-weight: 700;
-    margin-right: 30px;
-    width: 200px;
-    height: 40px;
-    background-color: var(--dark);
-    border-radius: 25px;
-    font-size: 25px;
-} */
 
 /* Login Page Styling */
 #login-signUp {
@@ -163,13 +152,14 @@ label {
 }
 #login-btn,
 #signUp-btn {
+    font-family: ComingSoon, sans;
     background-color: var(--mid);
     margin-top: 10px;
     width: 180px;
-    font-size: 40px;
+    font-size: 30px;
     height: 60px;
     border-radius: 25px;
-    box-shadow: 5px 5px 5px;
+     
 }
 #login-btn:hover,
 #signUp-btn:hover {
@@ -181,19 +171,18 @@ label {
 #signUp-box {
     display: inline-block;
     background-color: var(--light);
-    box-shadow: 5px 5px 5px;
     text-align: center;
     border-radius: 5px;
     margin-top: 40px;
     margin-left:auto;
     margin-right: auto;
     width: 40%;
-    height: 90vh;  
+    height: 700px;  
 }
 #login-box {
     display: inline-block;
     background-color: var(--light);
-    box-shadow: 5px 5px 5px;
+     
     text-align: center;
     border-radius: 5px;
     margin-top: 40px;
@@ -288,9 +277,17 @@ label {
     font-size: 20px;
 }
 
+.eventViewBtn {
+    color: var(--light);
+}
+
+.eventViewBtn:hover {
+    color: var(--mid);
+}
+
 
 /* Home Page Styling */
-#homepage-body, #about-us {
+#homepage-body, #about-us, #search-results {
     background-color: var(--light);
 }
 
@@ -440,7 +437,6 @@ footer {
     }
     #login-box {
         background-color: var(--light);
-        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
         padding-bottom: 25px;
@@ -463,7 +459,6 @@ footer {
 
      #signUp-box {
         background-color: var(--light);
-        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
         padding-bottom: 25px;
@@ -472,7 +467,7 @@ footer {
         margin-left:auto;
         margin-right: auto;
         width: 100%;
-        height: 100vh;  
+        height: 700px;  
     }
 
     .bday-locale {
@@ -582,7 +577,6 @@ footer {
     }
     #login-box {
         background-color: var(--light);
-        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
         padding-bottom: 25px;
@@ -605,7 +599,6 @@ footer {
 
      #signUp-box {
         background-color: var(--light);
-        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
         padding-bottom: 25px;
@@ -614,7 +607,7 @@ footer {
         margin-left:auto;
         margin-right: auto;
         width: 100%;
-        height: 90vh;  
+        height: 700px;  
     }
 
     .bday-locale {
@@ -714,7 +707,6 @@ footer {
     }
     #login-box {
         background-color: var(--light);
-        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
         padding-bottom: 25px;
@@ -737,7 +729,6 @@ footer {
 
      #signUp-box {
         background-color: var(--light);
-        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
         padding-bottom: 25px;
@@ -746,7 +737,7 @@ footer {
         margin-left:auto;
         margin-right: auto;
         width: 100%;
-        height: 100vh;  
+        height: 700px;  
     }
 
     .bday-locale {
@@ -848,7 +839,6 @@ footer {
 }
     #signUp-box {
         background-color: var(--light);
-        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
         padding-bottom: 25px;
@@ -857,11 +847,10 @@ footer {
         margin-left:auto;
         margin-right: auto;
         width: 600px;
-        height: 90vh;  
+        height: 700px;  
     }
     #login-box {
         background-color: var(--light);
-        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
         padding-bottom: 25px;

@@ -13,6 +13,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 router.get('/calendar', async (req, res) => {
   try {
     res.render('calendar', {
@@ -46,6 +47,17 @@ router.get('/new-event', async (req, res) => {
 router.get('/meet-team', async (req, res) => {
   try {
     res.render('meet-the-team', {
+      loggedIn: req.session.logged_in,
+    });
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/search-results', async (req, res) => {
+  try {
+    res.render('search-results', {
       loggedIn: req.session.logged_in,
     });
 
@@ -116,6 +128,30 @@ router.get('/profile/:id', async (req, res) => {
   
   try {
     const userData = await User.findByPk(req.params.id);
+    const user = userData.get({plain: true});
+
+    const eventsData = await Event.findAll();
+    console.log("EVENTS", eventsData)
+    const eventsRaw = eventsData.map(event => event.get({plain: true}));
+    const events = eventsRaw.map(event => ({title: event.eventName, start: dayjs(event.eventDate).format("YYYY-MM-DD") , url: `/event/${event.id}`}))
+    
+
+    res.render('profile', {
+      user,
+      events,
+      loggedIn: req.session.logged_in,
+      events: JSON.stringify(events)
+    });
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/my-profile', async (req, res) => {
+  
+  try {
+    const userData = await User.findByPk(req.session.user_id);
     const user = userData.get({plain: true});
 
     const eventsData = await Event.findAll();
