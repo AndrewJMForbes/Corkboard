@@ -13,6 +13,7 @@ router.get('/', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
 router.get('/calendar', async (req, res) => {
   try {
     res.render('calendar', {
@@ -46,6 +47,17 @@ router.get('/new-event', async (req, res) => {
 router.get('/meet-team', async (req, res) => {
   try {
     res.render('meet-the-team', {
+      loggedIn: req.session.logged_in,
+    });
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/search-results', async (req, res) => {
+  try {
+    res.render('search-results', {
       loggedIn: req.session.logged_in,
     });
 

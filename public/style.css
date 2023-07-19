@@ -279,7 +279,7 @@ label {
 
 
 /* Home Page Styling */
-#homepage-body, #about-us {
+#homepage-body, #about-us, #search-results {
     background-color: var(--light);
 }
 

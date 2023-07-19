@@ -7,6 +7,8 @@ const LoginForm = document.getElementById('btns');
 const profileBtn = document.getElementById('profile_btn');
 const createNewBtn = document.getElementById('newEvent-btn');
 const showEventBtn = document.getElementById('viewEventBtn');
+const searchBar = document.getElementById('search-bar');
+const searchBtn = document.getElementById('search');
 
 
 navBurger.addEventListener('click', function(event){
@@ -30,13 +32,17 @@ smallLogo.addEventListener("click", function(){
     document.location.replace('/');
 });
 
+searchBtn.addEventListener("click", function(){    
+    document.location.replace('/search-results');
+});
+
 browseBtn.addEventListener("click", function(){
     document.location.replace('/browse-events');
 });
 
 createNewBtn.addEventListener("click", function(){
     document.location.replace('/new-event');
-})
+});
 
 if (showEventBtn){
     showEventBtn.addEventListener("click", function(){
