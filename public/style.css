@@ -18,6 +18,33 @@ body{
     overflow: scroll;
     background-position: center;
 }
+hr {
+    background-color: var(--dark);
+}
+#content {
+    background-color: var(--mid);
+    font-weight: 700;
+    font-size: 1.5em;
+}
+#viewEventBtn {
+    color: var(--light)
+}
+.card-footer-item{
+    background-color:var(--dark);
+    border-radius: 0px 0px 5px 5px;
+    color: var(--light)
+}
+
+#info {
+    font-size: 20px;
+    font-weight: 700;
+}
+#event-info,
+#eventDate,
+#eventLocation {
+    font-weight: 700;
+    font-size: 1.5em;
+}
 #background:hover{
 animation-name: rotate;
 animation-duration: 5s;
@@ -37,6 +64,13 @@ label {
 .nav-start a {
     margin-left: 80px;
 }
+#profile-pic {
+    background-image: url(./images/Portrait_Placeholder.png);
+    background-size: contain;
+    border: 5px inset var(--dark);
+    width: 200px;
+    height: 200px;
+}
 #navbar {
     background-color: var(--light);
     width: 100vw;
@@ -48,24 +82,24 @@ label {
     opacity: .8;
 }
 #home-btn,
-#browse-btn{
+#browse-btn,
+#newEvent-btn{
     text-align: center;
     margin-top: 25px;
     margin-left: 10px;
     height: 20px;
     background-color: var(--light);
 }
-#home-btn:hover,
-#browse-btn:hover{
+/* #home-btn:hover,
+#browse-btn:hover,
+#newEvent-btn:hover{
 
     text-align: center;
-    color: var(--light);
+    color: var(--dark);
     height: 25px;
-    
     border-radius: 5px;
-    background-color: var(--dark);
     transform: scale(1.2);
-}
+} */
 #search-bar {
     margin-top: 20px;
     width: 55vw;
@@ -106,17 +140,6 @@ label {
     background-color: #E8D3B5;
     border-radius: 25px;
 }
-/* #btns:hover {
-    font-family: comingSoon, sans-serif;
-    color: var(--light);
-    font-weight: 700;
-    margin-right: 30px;
-    width: 200px;
-    height: 40px;
-    background-color: var(--dark);
-    border-radius: 25px;
-    font-size: 25px;
-} */
 
 /* Login Page Styling */
 #login-signUp {
@@ -129,13 +152,14 @@ label {
 }
 #login-btn,
 #signUp-btn {
+    font-family: ComingSoon, sans;
     background-color: var(--mid);
     margin-top: 10px;
     width: 180px;
-    font-size: 40px;
+    font-size: 30px;
     height: 60px;
     border-radius: 25px;
-    box-shadow: 5px 5px 5px;
+     
 }
 #login-btn:hover,
 #signUp-btn:hover {
@@ -147,19 +171,18 @@ label {
 #signUp-box {
     display: inline-block;
     background-color: var(--light);
-    box-shadow: 5px 5px 5px;
     text-align: center;
     border-radius: 5px;
     margin-top: 40px;
     margin-left:auto;
     margin-right: auto;
     width: 40%;
-    height: 90vh;  
+    height: 700px;  
 }
 #login-box {
     display: inline-block;
     background-color: var(--light);
-    box-shadow: 5px 5px 5px;
+     
     text-align: center;
     border-radius: 5px;
     margin-top: 40px;
@@ -178,13 +201,12 @@ label {
 }
 .form h1 {
     text-align: center;
-    border: 3px solid var(--dark);
+    border-bottom: 3px solid var(--dark);
     border-radius: 5px 5px 0 0;
     width: 100%;
     background-color: var(--light);
     font-size: 40px;
     font-weight: 700;
-    text-decoration: underline;
 }
 .bday-locale {
     display: flex;
@@ -209,7 +231,7 @@ label {
    margin-top: 15px;
    width: 100%;
    height: 40px;
-   font-size: 25px;
+   font-size: 18px;
    font-weight: 700;
    margin-left: auto;
    margin-right: auto;
@@ -257,9 +279,28 @@ label {
 
 
 /* Home Page Styling */
-#homepage-body {
+#homepage-body, #about-us {
     background-color: var(--light);
-    /* margin: 40px; */
+}
+
+#about-us {
+    margin-top: 20px;
+}
+
+#event-sample {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+#sample-event {
+    background-color: var(--mid);
+}
+
+.team-column {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
 }
 
 .profile-box {
@@ -326,6 +367,16 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
+    #newEvent-btn {
+        height: 40px;
+        width: 50%;
+        font-size: medium;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+    }
     #btns {
         margin-left: auto;
         margin-right: auto;
@@ -378,7 +429,6 @@ footer {
     }
     #login-box {
         background-color: var(--light);
-        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
         padding-bottom: 25px;
@@ -401,7 +451,6 @@ footer {
 
      #signUp-box {
         background-color: var(--light);
-        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
         padding-bottom: 25px;
@@ -410,7 +459,7 @@ footer {
         margin-left:auto;
         margin-right: auto;
         width: 100%;
-        height: 100vh;  
+        height: 700px;  
     }
 
     .bday-locale {
@@ -447,6 +496,16 @@ footer {
         border-radius: 5px;
         margin-left: auto;
         margin-right: auto;
+    }
+    #newEvent-btn {
+        height: 40px;
+        width: 50%;
+        font-size: medium;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
     }
     #btns {
         margin-top: 1px;
@@ -510,7 +569,6 @@ footer {
     }
     #login-box {
         background-color: var(--light);
-        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
         padding-bottom: 25px;
@@ -533,7 +591,6 @@ footer {
 
      #signUp-box {
         background-color: var(--light);
-        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
         padding-bottom: 25px;
@@ -542,7 +599,7 @@ footer {
         margin-left:auto;
         margin-right: auto;
         width: 100%;
-        height: 90vh;  
+        height: 700px;  
     }
 
     .bday-locale {
@@ -578,6 +635,16 @@ footer {
         margin-bottom: 20px;
         margin-top:20px;
      }
+     #newEvent-btn {
+        height: 40px;
+        width: 50%;
+        font-size: medium;
+        font-weight: 700;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+    }
      #btns {
         margin-left: auto;
         margin-right: auto;
@@ -632,7 +699,6 @@ footer {
     }
     #login-box {
         background-color: var(--light);
-        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
         padding-bottom: 25px;
@@ -655,7 +721,6 @@ footer {
 
      #signUp-box {
         background-color: var(--light);
-        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
         padding-bottom: 25px;
@@ -664,7 +729,7 @@ footer {
         margin-left:auto;
         margin-right: auto;
         width: 100%;
-        height: 100vh;  
+        height: 700px;  
     }
 
     .bday-locale {
@@ -692,6 +757,11 @@ footer {
     }
      #browse-btn {
         margin-top: 25px;
+        font-size: medium;
+        font-weight: 700;
+     }
+     #newEvent-btn {
+        margin-top: 16px;
         font-size: medium;
         font-weight: 700;
      }
@@ -761,7 +831,6 @@ footer {
 }
     #signUp-box {
         background-color: var(--light);
-        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
         padding-bottom: 25px;
@@ -770,11 +839,10 @@ footer {
         margin-left:auto;
         margin-right: auto;
         width: 600px;
-        height: 90vh;  
+        height: 700px;  
     }
     #login-box {
         background-color: var(--light);
-        box-shadow: 5px 5px 5px;
         text-align: center;
         border-radius: 5px;
         padding-bottom: 25px;

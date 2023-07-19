@@ -1,3 +1,5 @@
+const { eventData } = require('../seeds/event-seeds');
+
 module.exports = {
   format_time: (date) => {
     const options = {
@@ -9,7 +11,7 @@ module.exports = {
     return date.toLocaleDateString("en-US", options);
   },
   get_emoji: () => {
-    const randomNum = Math.random();
+    let randomNum = Math.random();
     let book = "📗";
 
     if (randomNum > 0.7) {

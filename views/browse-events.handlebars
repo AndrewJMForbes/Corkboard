@@ -5,19 +5,22 @@
         {{#each events as |event|}}
         <div class="column is-one-third">
             <div class="card">
-                <div class="card-content">
+                <div id="content" class="card-content">
                     <p class="title is-size-4 is-size-3-desktop has-text-centered"> 
                         <span>{{event.eventName}}</span>
-                    </p>
-                    <p class="subtitle columns p-event-info"> 
+                    </p><hr>
+                    <p id="info" class="subtitle columns p-event-info"> 
                         <span class="column is-one-half">{{event.eventLocation}}</span><br>
                         <span class="column is-one-half">{{format_time event.eventDate}}</span>
-                    </p>
+                    </p><hr>
+                    <p> {{event.eventDescription}} </p>
+
                 </div>
                 <footer class="card-footer">
                     <p class="card-footer-item">
-                        <span> <a value="{{event.id}}" class="eventViewBtn" >View Event</a> </span>
+                        <span> <a value="{{event.id}}" id="viewEventBtn" class="eventViewBtn" >View Event</a> </span>
                     </p>
+
                 </footer>
             </div>
         </div>
