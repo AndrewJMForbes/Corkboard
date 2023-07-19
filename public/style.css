@@ -277,6 +277,14 @@ label {
     font-size: 20px;
 }
 
+.eventViewBtn {
+    color: var(--light);
+}
+
+.eventViewBtn:hover {
+    color: var(--mid);
+}
+
 
 /* Home Page Styling */
 #homepage-body, #about-us, #search-results {

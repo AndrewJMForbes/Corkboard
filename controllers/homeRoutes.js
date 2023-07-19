@@ -148,5 +148,29 @@ router.get('/profile/:id', async (req, res) => {
   }
 });
 
+router.get('/my-profile', async (req, res) => {
+  
+  try {
+    const userData = await User.findByPk(req.session.user_id);
+    const user = userData.get({plain: true});
+
+    const eventsData = await Event.findAll();
+    console.log("EVENTS", eventsData)
+    const eventsRaw = eventsData.map(event => event.get({plain: true}));
+    const events = eventsRaw.map(event => ({title: event.eventName, start: dayjs(event.eventDate).format("YYYY-MM-DD") , url: `/event/${event.id}`}))
+    
+
+    res.render('profile', {
+      user,
+      events,
+      loggedIn: req.session.logged_in,
+      events: JSON.stringify(events)
+    });
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
 module.exports = router;
