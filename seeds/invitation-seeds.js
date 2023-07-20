@@ -32,7 +32,8 @@ const invitationData =
         "invitationStatus": "Maybe",
         "invitationDate": "5/25/2023",
         "event_id": 5,
-        "user_id": 2
+        "user_id": 2,
+        "isHost": true
     },
     {
         "invitationStatus": "Yes",
