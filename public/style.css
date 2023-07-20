@@ -50,7 +50,25 @@ hr {
   font-weight: 700;
   font-size: 1.5em;
 }
-
+#attendee-submit,
+#joinEvent,
+#new-event-submit {
+  background-color: var(--mid);
+  color: var(--dark);
+  border: 1px inset var(--dark);
+  border-radius: 5px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+#cancelBtn {
+  background-color: var(--dark);
+  color: var(--light);
+  margin-top: 20px;
+}
+#titleHead {
+  text-decoration: underline;
+  margin-bottom: 30px;
+}
 #background:hover {
   animation-name: rotate;
   animation-duration: 5s;
@@ -311,16 +329,59 @@ label {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }
-
+#demoContent {
+  font-size: large;
+  font-weight: 700;
+}
 #sample-event {
   background-color: var(--mid);
+  box-shadow: 3px 3px 5px var(--dark);
+}
+#sample-event:hover {
+  transform: scale(1.5);
+  transition: 2s;
+  transform-origin: bottom;
 }
 
 .team-column {
   display: flex;
   flex-flow: column wrap;
   align-content: center;
+}
+#aboutName {
+  text-decoration: underline;
+}
+#about1,
+#about2,
+#about3,
+#about4 {
+  border: 5px inset var(--mid);
+  border-radius: 5px 0 5px 0;
+  margin-right: 5px;
+  background: var(--light);
+  box-shadow: 3px 3px 4px var(--dark);
+}
+#about1:hover {
+  transform: scale(1.2);
+  transition: 1.5s;
+  transform-origin: left;
+  z-index: 10;
+}
+#about2:hover,
+#about3:hover {
+  transform: scale(1.2);
+  transition: 1.5s;
+  z-index: 10;
+}
+#about4:hover {
+  transform: scale(1.2);
+  transition: 1.5s;
+  transform-origin: right;
+  z-index: 10;
 }
 
 .profile-box {
