@@ -1,41 +1,50 @@
 <div id="event-page" class="event-box">
-    <h1 class="section-header is-size-1" id="eventName" eventId={{event.id}}>{{event.eventName}}</h1>
-    <div class="columns">
-        <div class="column is-three-quarters columns" id="event-info">
-            <h2 class="column is-half is-size-4">
-                <span>Host: {{host.username}} </span><br>
-                <span> Location: {{event.eventLocation}}</span>
-            </h2>
-            <h2 class="column is-half is-size-4">
-                <span>Date: {{format_time event.eventDate}} </span><br>
-                <span> Time: {{event.eventTime}} </span>
-            </h2>
-        </div>
-        <div class="column is-one-quarter" id="attendees-list">
-            <form>
-                <div>
-                    <label class="label">Invite attendees by email:</label>
-                    <input type="email" id ="email-input" >
-                </div>
-                <div class="control">
-                    <button class="button is-small is-link" id="attendee-submit">Submit</button>
-                </div>
-            </form><br>
-            <h2>Attending: </h2>
-            <ul>
-                {{#each event.invited_users as |attendee|}}
-                    <li><strong>{{attendee.username}}</strong> ({{attendee.email}}) </li>
-                {{/each}}
-            </ul>
-            <div class="control">
-                <button class="button is-small is-link" id="joinEvent">Join Event</button>
-            </div>
-        </div>
+  <h1
+    class="section-header is-size-1"
+    id="eventName"
+    eventId={{event.id}}
+  >{{event.eventName}}</h1>
+  <div class="columns">
+    <div class="column is-three-quarters columns" id="event-info">
+      <h2 class="column is-half is-size-4">
+        <span> <strong>Host:</strong> {{host.username}} </span>
+        <br></br>
+        <span> <strong>Location:</strong> {{event.eventLocation}}</span>
+      </h2>
+      <h2 class="column is-half is-size-4">
+        <span><strong>Date:</strong> {{format_time event.eventDate}} </span>
+        <br></br>
+        <span> <strong>Time:</strong> {{event.eventTime}} </span>
+      </h2>
     </div>
-    <div>
-        <h2>Description of event</h2>
-        <p> {{event.eventDescription}} </p>
+    <div class="column is-one-quarter" id="attendees-list">
+      <form>
+        <div>
+          <label class="label">Invite attendees by email:</label>
+          <input type="email" id="email-input" />
+        </div>
+        <div class="control">
+          <button
+            class="button is-small is-link"
+            id="attendee-submit"
+          >Submit</button>
+        </div>
+      </form><br />
+      <h2><strong>Attending:</strong> </h2>
+      <ul>
+        {{#each event.invited_users as |attendee|}}
+          <li><strong>{{attendee.username}}</strong> ({{attendee.email}}) </li>
+        {{/each}}
+      </ul>
+      <div class="control">
+        <button class="button is-small is-link" id="joinEvent">Join Event</button>
+      </div>
     </div>
-    
+  </div>
+  <div class="container has-text-centered" id="event-details">
+    <h2 class="is-size-3" id="description-event"><strong>Event Details</strong></h2></br>
+    <p class="is-size-4"> {{event.eventDescription}} </p>
+  </div>
+
 </div>
 <script src="../js/attendee.js"></script>
