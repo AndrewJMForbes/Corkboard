@@ -3,10 +3,28 @@
         <h2 class="mb-4 is-size-1-fullhd is-size-3-desktop is-size-4-mobile has-text-centered is-underlined">Search Results:</h2>
         <h3 class="is-size-3-fullhd is-size-5-desktop is-size-6-mobile has-text-centered">Users:
             <div id="user-results">
+                {{#each users as |user|}}
+                    <div class="column">
+                        <div class="card">
+                            <div id="content" class="card-content">
+                                <p><a href="/profile/{{user.id}}">{{user.username}}</a></p>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
             </div>
         </h3>
         <h3 class="is-size-3-fullhd is-size-5-desktop is-size-6-mobile has-text-centered">Events:
             <div id="event-results">
+               {{#each events as |event|}}
+                    <div class="column">
+                        <div class="card">
+                            <div id="content" class="card-content">
+                                <p><a href="/event/{{event.id}}">{{event.eventName}}</a></p>
+                            </div>
+                        </div>
+                    </div>
+                {{/each}}
             </div>
         </h3>
     </div>

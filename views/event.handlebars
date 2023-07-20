@@ -1,5 +1,5 @@
 <div id="event-page" class="event-box">
-    <h1 class="section-header is-size-1">{{event.eventName}}</h1>
+    <h1 class="section-header is-size-1" id="eventName" eventId={{event.id}}>{{event.eventName}}</h1>
     <div class="columns">
         <div class="column is-three-quarters columns" id="event-info">
             <h2 class="column is-half is-size-4">
@@ -15,7 +15,7 @@
             <form>
                 <div>
                     <label class="label">Invite attendees by email:</label>
-                    <input type="email" >
+                    <input type="email" id ="email-input" >
                 </div>
                 <div class="control">
                     <button class="button is-small is-link" id="attendee-submit">Submit</button>
@@ -27,10 +27,15 @@
                     <li><strong>{{attendee.username}}</strong> ({{attendee.email}}) </li>
                 {{/each}}
             </ul>
+            <div class="control">
+                <button class="button is-small is-link" id="joinEvent">Join Event</button>
+            </div>
         </div>
     </div>
     <div>
         <h2>Description of event</h2>
         <p> {{event.eventDescription}} </p>
     </div>
+    
 </div>
+<script src="../js/attendee.js"></script>
