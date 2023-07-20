@@ -2,13 +2,13 @@
 <div class="container">
   <div class="columns">
     <div class="column">
-      <figure id="profile-pic">
-      </figure>
+      <div class="container" id="profile-pic">
+      </div>
     </div>
     <div class="column">
       <div class="content">
         <p class="is-size-2"><strong> {{user.username}} </strong></p>
-        <p class="is-size-4"><strong>Age:</strong></p>
+        <p class="is-size-4"><strong>Birthday:</strong> {{format_birthday user.birthday}}</p>
         <p class="is-size-4"><strong>Location:</strong> {{user.location}}</p>
         <p class="is-size-4"><strong>Email:</strong> {{user.email}}</p>
       </div>
@@ -21,24 +21,14 @@
       <div class="box transparent-box">
         <h3 class="title is-4 is-spaced has-text-centered">Upcoming Events</h3>
        <div class="tile is-ancestor">
+        {{#each user.upcomingEvents as |event|}}
           <div class="tile is-parent is-spaced has-text-centered">
-            <article class="tile is-child box">
-              <p class="title">Event 1</p>
-              <p class="subtitle">Event description or date</p>
-            </article>
+             <a href="/event/{{event.id}}"><article class="upcomingEvent tile is-child box">
+              <p class="title"> {{event.eventName}}  </p>
+              <p class="subtitle"> {{event.eventDescription}}</p>
+            </article></a>
           </div>
-          <div class="tile is-parent is-spaced has-text-centered">
-            <article class="tile is-child box">
-              <p class="title">Event 2</p>
-              <p class="subtitle">Event description or date</p>
-            </article>
-          </div>
-          <div class="tile is-parent is-spaced has-text-centered">
-            <article class="tile is-child box">
-              <p class="title">Event 3</p>
-              <p class="subtitle">Event description or date</p>
-            </article>
-          </div>
+        {{/each}}
         </div>
         </div>
     <div class="column">
@@ -46,7 +36,7 @@
       <div class="box">
         <div id='calendar'></div>
 <script>
-      var events = {{{events}}}
+      var events = {{{calendarEvents}}}
 
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
@@ -56,10 +46,8 @@
         });
         calendar.render();
       });
-    
-
-
     </script>
+
       </div>
     </div>
   </div>

@@ -18,17 +18,21 @@ body{
     overflow: scroll;
     background-position: center;
 }
+
 hr {
     background-color: var(--dark);
 }
+
 #content {
     background-color: var(--mid);
     font-weight: 700;
     font-size: 1.5em;
 }
+
 #viewEventBtn {
     color: var(--light)
 }
+
 .card-footer-item{
     background-color:var(--dark);
     border-radius: 0px 0px 5px 5px;
@@ -39,38 +43,45 @@ hr {
     font-size: 20px;
     font-weight: 700;
 }
+
 #event-info,
 #eventDate,
 #eventLocation {
     font-weight: 700;
     font-size: 1.5em;
 }
+
 #background:hover{
 animation-name: rotate;
 animation-duration: 5s;
 animation-iteration-count: infinite;
 animation-timing-function: linear;
 }
+
 @keyframes rotate{
     from{ transform: rotate(-360deg);}
     to{ transform: rotate(360deg);}
 }
+
 label {
     display: block;
     font-size: 25px;
     font-weight: 700;
 }
+
 /* Nav Bar Styling */
 .nav-start a {
     margin-left: 80px;
 }
+
 #profile-pic {
     background-image: url(./images/Portrait_Placeholder.png);
     background-size: contain;
     border: 5px inset var(--dark);
-    width: 200px;
-    height: 200px;
+    width: 15vw;
+    height: 15vw;
 }
+
 #navbar {
     background-color: var(--light);
     width: 100vw;
@@ -90,16 +101,7 @@ label {
     height: 20px;
     background-color: var(--light);
 }
-/* #home-btn:hover,
-#browse-btn:hover,
-#newEvent-btn:hover{
 
-    text-align: center;
-    color: var(--dark);
-    height: 25px;
-    border-radius: 5px;
-    transform: scale(1.2);
-} */
 #search-bar {
     margin-top: 20px;
     width: 55vw;
@@ -328,8 +330,16 @@ label {
 
 
   /* Other */
-footer {
-    position: relative;
+.aboutImage {
+    border-radius: 50%;
+}
+
+.upcomingEvent {
+    height: 100%;
+}
+
+.upcomingEvent:hover {
+    background-color: var(--mid);
 }
 
 @media screen and (max-width: 396px) {

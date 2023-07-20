@@ -19,7 +19,7 @@ Invitation.init(
     },
     invitationDate: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
     event_id: {
       type: DataTypes.INTEGER,

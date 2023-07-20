@@ -1,6 +1,13 @@
 const { eventData } = require('../seeds/event-seeds');
 
 module.exports = {
+  format_birthday: (date) => {
+    const options = {
+      month: "long",
+      day: "numeric",
+    };
+    return date.toLocaleDateString("en-US", options);
+  },
   format_time: (date) => {
     const options = {
       weekday: "long",
