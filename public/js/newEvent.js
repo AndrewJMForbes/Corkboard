@@ -5,8 +5,8 @@ newEventSubmit.addEventListener('click', function (){
     const eventDescription = document.getElementById('new-event-description').value;
     const eventLocation = document.getElementById('new-event-location').value;
     const eventDate = document.getElementById('new-event-date').value;
-    const eventTimeStart = document.getElementById('new-event-time-start').value;
-    const eventTimeEnd = document.getElementById('new-event-time-end').value;
+    const eventTimeStart = convertTo12HrFormat(document.getElementById('new-event-time-start').value);
+    const eventTimeEnd = convertTo12HrFormat(document.getElementById('new-event-time-end').value);
     const eventTime = `${eventTimeStart} - ${eventTimeEnd}`;
 
 
@@ -26,3 +26,15 @@ newEventSubmit.addEventListener('click', function (){
         };
     });
 });
+
+function convertTo12HrFormat(time) {
+    const [hours, minutes] = time.split(":");
+    let period = "AM";
+  
+    if (hours >= 12) {
+      period = "PM";
+    }
+  
+    const hoursIn12HrFormat = hours % 12 || 12;
+    return `${hoursIn12HrFormat}:${minutes} ${period}`;
+  }
