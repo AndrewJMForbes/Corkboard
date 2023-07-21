@@ -4,8 +4,8 @@
     id="eventName"
     eventId={{event.id}}
   >{{event.eventName}}</h1>
-  <div class="columns">
-    <div class="column is-three-quarters columns" id="event-info">
+  <div class="columns mt-6">
+    <div class="column is-three-quarters columns mx-5 is-multiline" id="event-info">
       <h2 class="column is-half is-size-4">
         <span> <strong>Host:</strong> {{host.username}} </span>
         <br></br>
@@ -16,6 +16,10 @@
         <br></br>
         <span> <strong>Time:</strong> {{event.eventTime}} </span>
       </h2>
+      <div class="container has-text-centered" id="event-details">
+        <h2 class="is-size-3" id="description-event"><strong>Event Details</strong></h2></br>
+        <p class="is-size-4"> {{event.eventDescription}} </p>
+      </div>
     </div>
     <div class="column is-one-quarter" id="attendees-list">
       <form>
@@ -36,15 +40,19 @@
           <li><strong>{{attendee.username}}</strong> ({{attendee.email}}) </li>
         {{/each}}
       </ul>
+      <br>
+      {{#if loggedIn}}
       <div class="control">
         <button class="button is-small is-link" id="joinEvent">Join Event</button>
       </div>
+      {{else}}
+      <br>
+      <h2><strong>Log In or Sign Up to join this event!</strong> </h2>
+      {{/if}}
+
     </div>
   </div>
-  <div class="container has-text-centered" id="event-details">
-    <h2 class="is-size-3" id="description-event"><strong>Event Details</strong></h2></br>
-    <p class="is-size-4"> {{event.eventDescription}} </p>
-  </div>
+  
 
 </div>
 <script src="../js/attendee.js"></script>
