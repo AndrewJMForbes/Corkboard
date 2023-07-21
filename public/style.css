@@ -278,7 +278,7 @@ label {
   overflow-y: scroll;
 }
 #event-details {
-  margin-top: 5rem;
+  margin-top: 2rem;
   padding: 3rem;
 }
 
@@ -289,6 +289,12 @@ label {
 #event-form,
 #event-page {
   width: 80vw;
+}
+
+#event-info {
+  background-color: var(--mid);
+  border: 2px solid var(--dark);
+  height: fit-content;
 }
 
 .p-event-info {
@@ -552,6 +558,10 @@ label {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  #event-sample {
+    width: 100%
   }
 }
 @media screen and (max-width: 769px) and (min-width: 396px) {
